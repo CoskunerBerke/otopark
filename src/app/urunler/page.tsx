@@ -1,80 +1,79 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Shield, ChevronRight, Phone, ArrowRight } from "lucide-react";
+import Image from "next/image";
+import { Shield, ArrowRight, Phone, ChevronRight } from "lucide-react";
 import { businessConfig } from "@/config/business";
 
 export const metadata: Metadata = {
   title: "Ürünler",
   description:
-    "Araç bariyerleri, park kaldırıcıları, otopark aydınlatması ve tüm otopark ekipmanları. Otopark Ekipmanları ürün kataloğu.",
+    "Demir otopark araç stoperi, otopark bariyerleri, bariyer ürünleri, kolon köşe koruyucular ve bisiklet park demirleri. Otopark Ekipmanları ürün kataloğu.",
 };
 
 const categories = [
   {
-    id: "bariyerler",
-    title: "Araç Bariyerleri",
-    desc: "Manuel, otomatik ve elektrikli araç bariyer sistemleri. AVM, hastane, site ve kapalı otopark uygulamaları için ideal seçenekler.",
-    products: [
-      "Galvaniz Bariyer",
-      "Boru Bariyer",
-      "Katlanır Bariyer",
-      "Elektrikli Bariyer",
-      "Zincirli Bariyer",
+    id: "arac-stoper",
+    title: "Demir Otopark Araç Stoperi",
+    desc: "Araçların park alanının dışına çıkmasını, duvara veya engele çarpmasını önleyen sağlam demir araç stoperleridir. Yüksek dayanıklılığa sahip malzeme yapısı sayesinde uzun yıllar boyunca sorunsuz hizmet sunar.",
+    img: "/images/arac-stoper.jpg",
+    features: [
+      "Yüksek kaliteli demir konstrüksiyon",
+      "Zemine ankraj ile sabit montaj",
+      "Reflektörlü şerit seçeneği",
+      "Farklı renk seçenekleri mevcut",
+      "Açık ve kapalı otopark kullanımına uygun",
     ],
   },
   {
-    id: "kaldiricilar",
-    title: "Park Kaldırıcılar",
-    desc: "Tek ve çift araçlı mekanik park kaldırıcı sistemler. Dar alanlarda çift kat park imkânı.",
-    products: [
-      "Tek Araçlı Park Kaldırıcı",
-      "Çift Araçlı Park Kaldırıcı",
-      "Pit-Lift Sistemleri",
-      "Puzzle Park Sistemleri",
+    id: "otopark-bariyerleri",
+    title: "Demir Otopark Bariyerleri",
+    desc: "Otoparklarda park alanlarını sınırlandırmak, güvenliği sağlamak ve düzeni korumak için kullanılan yüksek kaliteli demir bariyer sistemleridir. Siyah-sarı reflektörlü seçenekleri ile gece görünürlüğü maksimum seviyededir.",
+    img: "/images/otopark-bariyerleri.jpg",
+    features: [
+      "Siyah-sarı reflektörlü yüzey",
+      "Gece görünürlüğü yüksek tasarım",
+      "Çeşitli boy ve konfigürasyonlar",
+      "Dayanıklı toz boya kaplama",
+      "Hızlı montaj sistemi",
     ],
   },
   {
-    id: "aydinlatma",
-    title: "Otopark Aydınlatması",
-    desc: "LED teknolojisi ile enerji tasarruflu, uzun ömürlü otopark aydınlatma armatürleri.",
-    products: [
-      "LED Tavan Armatürü",
-      "Acil Aydınlatma",
-      "Çıkış Levhası Armatürleri",
-      "Sensörlü Armatürler",
+    id: "bariyer-urunleri",
+    title: "Demir Bariyer Ürünleri",
+    desc: "Etkinlikler, şantiyeler, kalabalık alanlar ve geçici güvenlik önlemi gerektiren her yerde kullanılan taşınabilir ve birbirine kilitlenebilir metal bariyer ürünleridir.",
+    img: "/images/bariyer-urunleri.jpg",
+    features: [
+      "Taşınabilir ve hafif yapı",
+      "Birbirine kilitlenebilir sistem",
+      "Sarı, gri, turuncu renk seçenekleri",
+      "Etkinlik ve şantiye kullanımına uygun",
+      "Toplu alımda özel fiyatlandırma",
     ],
   },
   {
-    id: "boya",
-    title: "Otopark Boyası & Çizgi",
-    desc: "Kaymaz zemin boyaları, park yeri çizgi boyaları ve trafik işaret uygulamaları.",
-    products: [
-      "Zemin Boyası",
-      "Çizgi Boyası",
-      "Kaymaz Kaplama",
-      "Trafik Sarı Boya",
+    id: "kolon-kose-koruyucu",
+    title: "Demir Kolon Köşe Koruyucular",
+    desc: "Otopark kolonlarını ve duvar köşelerini araç çarpmasına karşı koruyan sağlam demir koruyucu sistemlerdir. Dikkat çekici siyah-sarı renk kombinasyonu sayesinde sürücüler mesafeyi kolayca hesaplayabilir.",
+    img: "/images/kolon-kose-koruyucu.jpg",
+    features: [
+      "Kolon ve köşe profilleri mevcut",
+      "Siyah-sarı uyarı şeridi",
+      "Darbe emici tasarım",
+      "Kolay montaj sistemi",
+      "Endüstriyel ortamlara dayanıklı",
     ],
   },
   {
-    id: "levhalar",
-    title: "Trafik Levhaları",
-    desc: "Otopark giriş-çıkış levhaları, yönlendirme levhaları ve reflektörlü trafik işaretleme ürünleri.",
-    products: [
-      "Yön Levhaları",
-      "Kat Levhaları",
-      "Giriş-Çıkış Levhaları",
-      "Engelli Park Levhaları",
-    ],
-  },
-  {
-    id: "aksesuarlar",
-    title: "Otopark Aksesuarları",
-    desc: "Bariyer zincirleri, araç durdurucu takozlar, park konileri ve tüm otopark aksesuarları.",
-    products: [
-      "Park Konisi",
-      "Araç Takozu",
-      "Bariyer Zinciri",
-      "Park Çubuğu",
+    id: "bisiklet-park",
+    title: "Bisiklet Park Demirleri",
+    desc: "Kamu binaları, üniversiteler, AVM'ler, parklar ve toplu taşıma istasyonları için tasarlanmış galvanizli çelik bisiklet park standlarıdır. Korozyona karşı dirençli dış kaplama sayesinde her hava koşulunda uzun ömürlü kullanım sağlar.",
+    img: "/images/bisiklet-park.jpg",
+    features: [
+      "Galvanizli çelik yapı",
+      "Spiral, düz ve modern tasarım seçenekleri",
+      "Tekli veya çoklu araç kapasitesi",
+      "İç ve dış mekan kullanımına uygun",
+      "Özel renk seçenekleri ile sipariş imkânı",
     ],
   },
 ];
@@ -91,98 +90,96 @@ export default function UrunlerPage() {
           </ul>
           <h1 className="page-header-title">Ürün Kategorileri</h1>
           <p className="page-header-desc">
-            Tüm otopark ekipmanı ihtiyaçlarınız için geniş ürün yelpazemizi inceleyin.
+            Otoparklarınız için 5 temel demir ekipman kategorimizi inceleyin.
           </p>
         </div>
       </div>
 
       <section className="section-padding">
         <div className="container">
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))",
-              gap: 28,
-            }}
-          >
-            {categories.map((cat) => (
+          <div style={{ display: "flex", flexDirection: "column", gap: 48 }}>
+            {categories.map((cat, idx) => (
               <div
                 key={cat.id}
                 style={{
-                  background: "#fff",
-                  border: "1.5px solid #E0E0E0",
+                  display: "grid",
+                  gridTemplateColumns: idx % 2 === 0 ? "1fr 1fr" : "1fr 1fr",
+                  gap: 48,
+                  alignItems: "center",
+                  flexDirection: idx % 2 !== 0 ? "row-reverse" : "row",
+                  background: idx % 2 !== 0 ? "#F9F9F9" : "#fff",
                   borderRadius: 20,
                   overflow: "hidden",
-                  transition: "all 0.3s ease",
-                  display: "flex",
-                  flexDirection: "column",
+                  border: "1.5px solid #EEEEEE",
                 }}
               >
-                {/* Placeholder img */}
+                {/* Image */}
                 <div
                   style={{
-                    background: "linear-gradient(135deg, #F5F5F5, #EEEEEE)",
-                    aspectRatio: "16/9",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    flexDirection: "column",
-                    gap: 8,
-                    color: "#BDBDBD",
+                    position: "relative",
+                    aspectRatio: "4/3",
+                    background: "#F0F0F0",
+                    order: idx % 2 !== 0 ? 2 : 1,
                   }}
                 >
-                  <Shield size={36} />
-                  <span style={{ fontSize: "0.75rem" }}>Görsel yakında eklenecek</span>
+                  <Image
+                    src={cat.img}
+                    alt={cat.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    style={{ objectFit: "cover" }}
+                  />
                 </div>
 
-                <div style={{ padding: 24, flex: 1, display: "flex", flexDirection: "column", gap: 12 }}>
+                {/* Content */}
+                <div
+                  style={{
+                    padding: "40px",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: 16,
+                    order: idx % 2 !== 0 ? 1 : 2,
+                  }}
+                >
+                  <span className="badge">Ürün Kategorisi</span>
                   <h2
                     style={{
                       fontFamily: "Outfit, sans-serif",
-                      fontSize: "1.15rem",
-                      fontWeight: 800,
+                      fontSize: "clamp(1.4rem, 3vw, 2rem)",
+                      fontWeight: 900,
                       color: "#111",
+                      lineHeight: 1.2,
+                      letterSpacing: "-0.02em",
                     }}
                   >
                     {cat.title}
                   </h2>
-                  <p style={{ fontSize: "0.85rem", color: "#9E9E9E", lineHeight: 1.7 }}>
+                  <p style={{ color: "#757575", lineHeight: 1.8, fontSize: "0.95rem" }}>
                     {cat.desc}
                   </p>
-
-                  <div style={{ display: "flex", flexDirection: "column", gap: 6, marginTop: 4 }}>
-                    {cat.products.map((p) => (
-                      <div
-                        key={p}
-                        style={{
-                          display: "flex",
-                          alignItems: "center",
-                          gap: 8,
-                          fontSize: "0.82rem",
-                          color: "#424242",
-                        }}
-                      >
-                        <ChevronRight size={13} style={{ color: "#D4A800", flexShrink: 0 }} />
-                        {p}
+                  <div style={{ display: "flex", flexDirection: "column", gap: 8, marginTop: 4 }}>
+                    {cat.features.map((f) => (
+                      <div key={f} style={{ display: "flex", alignItems: "center", gap: 10, fontSize: "0.875rem", color: "#424242" }}>
+                        <ChevronRight size={14} style={{ color: "#D4A800", flexShrink: 0 }} />
+                        {f}
                       </div>
                     ))}
                   </div>
-
-                  <div style={{ marginTop: "auto", paddingTop: 16, borderTop: "1px solid #F0F0F0" }}>
-                    <Link
-                      href="/iletisim"
-                      className="btn-primary"
-                      style={{ width: "100%", justifyContent: "center" }}
-                    >
-                      Teklif İste <ArrowRight size={14} />
+                  <div style={{ display: "flex", gap: 12, marginTop: 8, flexWrap: "wrap" }}>
+                    <Link href="/iletisim" className="btn-primary">
+                      Teklif Al <ArrowRight size={14} />
                     </Link>
+                    <a href={`tel:${businessConfig.phone}`} className="btn-secondary" style={{ fontSize: "0.875rem" }}>
+                      <Phone size={14} />
+                      {businessConfig.phone}
+                    </a>
                   </div>
                 </div>
               </div>
             ))}
           </div>
 
-          {/* CTA */}
+          {/* Bottom CTA */}
           <div
             style={{
               marginTop: 64,
@@ -193,25 +190,23 @@ export default function UrunlerPage() {
               border: "1.5px solid rgba(245,197,24,0.15)",
             }}
           >
-            <h3
-              style={{
-                fontFamily: "Outfit, sans-serif",
-                fontSize: "1.8rem",
-                fontWeight: 900,
-                color: "#fff",
-                marginBottom: 12,
-              }}
-            >
+            <h3 style={{ fontFamily: "Outfit, sans-serif", fontSize: "1.8rem", fontWeight: 900, color: "#fff", marginBottom: 12 }}>
               Aradığınızı bulamadınız mı?
             </h3>
             <p style={{ color: "rgba(255,255,255,0.6)", marginBottom: 24 }}>
-              Geniş tedarik ağımız sayesinde ihtiyaç duyduğunuz her türlü otopark
-              ekipmanını sizin için temin edebiliriz.
+              Geniş ürün yelpazemiz ve özel üretim kapasitemizle ihtiyacınıza özel
+              çözümler üretiyoruz.
             </p>
-            <a href={`tel:${businessConfig.phone}`} className="btn-primary">
-              <Phone size={16} />
-              Hemen Arayın
-            </a>
+            <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
+              <a href={`tel:${businessConfig.phone}`} className="btn-primary">
+                <Phone size={16} />
+                {businessConfig.phone}
+              </a>
+              <a href={`tel:${businessConfig.phone2}`} className="btn-outline-white">
+                <Phone size={16} />
+                {businessConfig.phone2}
+              </a>
+            </div>
           </div>
         </div>
       </section>

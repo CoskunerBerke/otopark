@@ -1,13 +1,14 @@
 export const businessConfig = {
   name: "Otopark Ekipmanları",
   shortName: "Otopark Ekipmanı",
-  tagline: "Profesyonel Otopark Ekipmanı Çözümleri",
+  tagline: "Otoparkınızda Maksimum Güvenlik, Kusursuz Düzen",
   description:
-    "Araç bariyerleri, park kaldırıcıları, otopark aydınlatması ve tüm otopark ekipmanlarında güvenilir çözüm ortağınız. Bir TRİ Metal Kuruluşudur.",
+    "Demir araç stoperleri, otopark bariyerleri, bariyer ürünleri, kolon köşe koruyucular ve bisiklet park demirleri. Bir TRİ Metal Kuruluşudur.",
   domain: "otoparkekipmani.com",
   email: "info@otoparkekipmani.com",
-  phone: "+90 312 000 00 00",
-  whatsapp: "+903120000000",
+  phone: "0312 963 44 63",
+  phone2: "0533 974 67 59",
+  whatsapp: "+905339746759",
 
   address: "Prestij Business Center, Ostim",
   fullAddress:
