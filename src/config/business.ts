@@ -16,9 +16,9 @@ export const businessConfig = {
   city: "Ankara",
 
   googleMapsUrl:
-    "https://www.google.com/maps/place/Ostim+Prestij+%C4%B0%C5%9F+Merkezi/@39.9744439,32.7479707,17z/data=!3m1!4b1!4m6!3m5!1s0x14d34789df50e505:0xe21f57bc83f069a5!8m2!3d39.9744439!4d32.7505456!16s%2Fg%2F11b8df_z0z",
+    "https://www.google.com/maps/place/TRIMETAL+YAPI+VE+YALITIM+MALZEMELER%C4%B0/@39.9701969,32.7444628,17.87z/data=!4m6!3m5!1s0x14d349b950c225c7:0x363f14115ca8566b!8m2!3d39.969879!4d32.7447994!16s%2Fg%2F11vly7xt_7",
   googleMapsEmbedUrl:
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3058.423985108398!2d32.7479707!3d39.9744439!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34789df50e505%3A0xe21f57bc83f069a5!2sOstim%20Prestij%20%C4%B0%C5%9F%20Merkezi!5e0!3m2!1str!2str!4v1710000000000!5m2!1str!2str",
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3058.6213797621183!2d32.7444628!3d39.969879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d349b950c225c7%3A0x363f14115ca8566b!2sTRIMETAL%20YAPI%20VE%20YALITIM%20MALZEMELER%C4%B0!5e0!3m2!1str!2str!4v1710000000000!5m2!1str!2str",
 
   parentCompany: {
     name: "TRİ Metal Yapı",
